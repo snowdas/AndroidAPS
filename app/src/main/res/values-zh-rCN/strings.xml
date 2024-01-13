@@ -165,7 +165,7 @@
     <string name="smscommunicator">SMS短信通讯器</string>
     <string name="smscommunicator_allowednumbers">允许的手机号码</string>
     <string name="smscommunicator_allowednumbers_summary">+XXXXXXXXXX;+YYYYYYYYYY</string>
-    <string name="smscommunicator_bolusreplywithcode">要输注大剂量胰岛素%1$.2fU 回复如下代码 %2$s</string>
+    <string name="smscommunicator_bolusreplywithcode">要输注大BOLUS %1$.2fU please回 %2$s</string>
     <string name="smscommunicator_mealbolusreplywithcode">要输注餐前大剂量 %1$.2fU ，请回复验证码 %2$s</string>
     <string name="smscommunicator_temptargetwithcode">要设置临时目标 %1$s，请回复验证码 %2$s</string>
     <string name="smscommunicator_temptargetcancel">要取消临时目标，请回复验证码 %1$s</string>
@@ -197,7 +197,7 @@
     <string name="smscommunicator_profilereplywithcode">要切换配置文件到 %1$s %2$d%% 请回复代码 %3$s</string>
     <string name="smscommunicator_extendedreplywithcode">要开始扩展大剂量 %1$.2fU/h 持续时间%2$d 分钟，请回复验证码：%3$s</string>
     <string name="smscommunicator_carbsreplywithcode">要在 %2$s 输入 %1$d 克，请回复验证码 %3$s</string>
-    <string name="smscommunicator_basalpctreplywithcode">要开始基础率 %1$d%% 持续时间%2$d 分钟，请回复如下代码 %3$s</string>
+    <string name="smscommunicator_basalpctreplywithcode">要开始基础率 %1$d%% 时间%2$d 分钟，请回 %3$s</string>
     <string name="smscommunicator_suspendreplywithcode">要暂停闭环 %1$d 分钟请回复如下代码 %2$s</string>
     <string name="smscommunicator_loopresumereplywithcode">恢复闭环，请回复验证码：%1$s</string>
     <string name="smscommunicator_loopenablereplywithcode">启用闭环，请回复验证码：%1$s</string>
@@ -788,7 +788,7 @@
     <string name="loop_tbrrequest_time_label">临时基础率请求时间</string>
     <string name="loop_tbrexecution_time_label">临时基础率持续时长</string>
     <!-- SMS Communicator & OTP Authenticator -->
-    <string name="smscommunicator_code_from_authenticator_for" comment="This is continuation of sentence: To [ACTION] reply with code">从验证码生成器应用获取%1$s的随机码，并附加PIN码</string>
+    <string name="smscommunicator_code_from_authenticator_for" comment="This is continuation of sentence: To [ACTION] reply with code">从应用%1$s的COD</string>
     <string name="smscommunicator_otp_pin">验证码末尾强制附加的PIN码</string>
     <string name="smscommunicator_otp_pin_summary">在每次生成的一次性随机密码末尾，需要记住并强制附加的数字。</string>
     <string name="smscomunicator_tab_otp_label">验证码生成器设置</string>
