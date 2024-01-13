@@ -172,12 +172,12 @@
     <string name="smscommunicator_stopsmswithcode">要禁用短信遥控服务，请回复%1$s.\n\n请记住，你只能在AAPS闭环手机上重新激活此功能。</string>
     <string name="smscommunicator_stoppedsms">短信遥控服务已禁用。要重新激活它，请使用AAPS闭环手机。</string>
     <string name="smscommunicator_calibrationreplywithcode">要发送校准值 %1$.2f 回复如下代码 %2$s</string>
-    <string name="smscommunicator_bolusfailed">大剂量输注失败</string>
+    <string name="smscommunicator_bolusfailed">bolus输注失败</string>
     <string name="smscommunicator_remotebolusmindistance_summary">一次远程遥控输注命令与下一次命令之间必须经过的最小分钟数</string>
     <string name="smscommunicator_remotebolusmindistance">两次短信遥控胰岛素输注的时间间隔</string>
     <string name="smscommunicator_remotebolusmindistance_caveat">为了您的安全，您需要添加至少两个电话号码。</string>
     <string name="bolusrequested">将要输注 %1$.2f U</string>
-    <string name="smscommunicator_bolusdelivered">成功输注大剂量%1$.2fU</string>
+    <string name="smscommunicator_bolusdelivered">成功输注BOLUS %1$.2fU</string>
     <string name="smscommunicator_mealbolusdelivered">成功输注餐时大剂量%1$.2fU</string>
     <string name="smscommunicator_mealbolusdelivered_tt">目标 %1$s 执行 %2$d 分钟</string>
     <string name="smscommunicator_tt_set">目标 %1$s 执行 %2$d 分钟设置成功</string>
@@ -211,9 +211,9 @@
     <string name="smscommunicator_extendedfailed">开始扩展大剂量失败了</string>
     <string name="smscommunicator_basalstopreplywithcode">要停止临时基础率，请回复如下代码 %1$s</string>
     <string name="smscommunicator_extendedstopreplywithcode">要停止扩展大剂量，请回复如下代码 %1$s</string>
-    <string name="smscommunicator_tempbasalcanceled">临时基础率取消了</string>
+    <string name="smscommunicator_tempbasalcanceled">临时BASAL率取消了</string>
     <string name="smscommunicator_extendedcanceled">扩展大剂量已经取消了</string>
-    <string name="smscommunicator_tempbasalcancelfailed">取消临时基础率失败</string>
+    <string name="smscommunicator_tempbasalcancelfailed">取消临时BASAL失败</string>
     <string name="smscommunicator_extendedcancelfailed">取消扩展大剂量失败</string>
     <string name="smscommunicator_unknowncommand">未知的命令或者错误的回复</string>
     <string name="quickwizard">快速向导</string>
