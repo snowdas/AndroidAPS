@@ -157,10 +157,10 @@ class MainApp : DaggerApplication() {
         aapsLogger.debug("Remote: " + config.REMOTE)
         aapsLogger.debug("Phone: " + Build.MANUFACTURER + " " + Build.MODEL)
         registerLocalBroadcastReceiver()
-        setupRemoteConfig()
+        // setupRemoteConfig() // Bypass: version check disabled
 
-        // trigger here to see the new version on app start after an update
-        handler.postDelayed({ versionCheckersUtils.triggerCheckVersion() }, 30000)
+        // Bypass: version check disabled, no longer trigger version check on app start
+        // handler.postDelayed({ versionCheckersUtils.triggerCheckVersion() }, 30000)
 
         // delayed actions to make rh context updated for translations
         handler.postDelayed(

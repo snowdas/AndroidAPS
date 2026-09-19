@@ -32,6 +32,9 @@ class Objective0 @Inject constructor(
     private val passwordCheck: PasswordCheck,
 ) : Objective(preferences, rh, dateUtil, "config", R.string.objectives_0_objective, R.string.objectives_0_gate) {
 
+    // Keep real validation for this objective: it is the self-check of the Nightscout/Tidepool setup
+    // used for remote monitoring. All following objectives stay bypassed.
+    override val bypassed: Boolean get() = false
 
     val tidepoolPlugin get() = activePlugin.getSpecificPluginsListByInterface(Tidepool::class.java).firstOrNull() as Tidepool?
 

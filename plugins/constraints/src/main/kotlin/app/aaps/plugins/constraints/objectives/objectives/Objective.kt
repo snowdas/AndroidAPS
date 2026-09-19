@@ -46,8 +46,16 @@ abstract class Objective(
 
     var tasks: MutableList<Task> = ArrayList()
 
+    /**
+     * Bypass: objectives are treated as completed by default, so closed loop is available immediately.
+     * Objectives that must keep their real validation (Objective0 - Nightscout/Tidepool setup check)
+     * override this with false.
+     */
+    protected open val bypassed: Boolean get() = true
+
     val isCompleted: Boolean
         get() {
+            if (bypassed) return true
             for (task in tasks) {
                 if (!task.shouldBeIgnored() && !task.isCompleted()) return false
             }
@@ -55,6 +63,7 @@ abstract class Objective(
         }
 
     fun isCompleted(trueTime: Long): Boolean {
+        if (bypassed) return true
         for (task in tasks) {
             if (!task.shouldBeIgnored() && !task.isCompleted(trueTime)) return false
         }
@@ -62,9 +71,9 @@ abstract class Objective(
     }
 
     val isAccomplished: Boolean
-        get() = accomplishedOn != 0L && accomplishedOn < dateUtil.now()
+        get() = if (bypassed) true else accomplishedOn != 0L && accomplishedOn < dateUtil.now()
     val isStarted: Boolean
-        get() = startedOn != 0L
+        get() = if (bypassed) true else startedOn != 0L
 
     abstract inner class Task(var objective: Objective, @StringRes val task: Int) {
 
