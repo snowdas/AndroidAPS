@@ -15,6 +15,7 @@ import app.aaps.implementation.R
 import org.json.JSONObject
 import javax.inject.Inject
 import javax.inject.Singleton
+import kotlin.math.roundToInt
 
 @Singleton
 class PumpStatusProviderImpl @Inject constructor(
@@ -44,15 +45,17 @@ class PumpStatusProviderImpl @Inject constructor(
                 lines += rh.gs(R.string.short_status_last_connection, agoMin)
             }
 
-            pump.lastBolusAmount?.let { lastBolusAmount ->
-                pump.lastBolusTime?.let { lastBolusTimestamp ->
-                    lines += rh.gs(
-                        R.string.short_status_last_bolus,
-                        decimalFormatter.to2Decimal(lastBolusAmount),
-                        dateUtil.timeString(lastBolusTimestamp)
-                    )
-                }
-            }
+            // LastBolus commented out per request, replaced by Reservoir display
+            // pump.lastBolusAmount?.let { lastBolusAmount ->
+            //     pump.lastBolusTime?.let { lastBolusTimestamp ->
+            //         lines += rh.gs(
+            //             R.string.short_status_last_bolus,
+            //             decimalFormatter.to2Decimal(lastBolusAmount),
+            //             dateUtil.timeString(lastBolusTimestamp)
+            //         )
+            //     }
+            // }
+            lines += rh.gs(R.string.short_status_reservoir, pump.reservoirLevel.roundToInt())
 
             pumpSync.expectedPumpState().temporaryBasal?.let { temporaryBasal ->
                 lines += rh.gs(R.string.short_status_temp_basal, temporaryBasal.toStringFull(dateUtil, rh))
